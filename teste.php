@@ -8,7 +8,7 @@ $dadosSite = file_get_contents($url);
 $dia1 = explode('</small><br /><small>',$dadosSite);
 $dia2 = explode('</small></div> <a href="download"',$dia1[1]);
 $hosp1 = explode('es</div> <div class="row no-gutters align-items-center"><div class="col-auto"> <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">',$dadosSite);
-$hosp2 = explode('</div></div><div class="col"> <div class="progress progress-sm mr-2"><div class="progress-bar bg-warning" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">',$hosp1[1]);
+$hosp2 = explode('</div></div><div class="col">',$hosp1[1]);
 $array1 =explode('Confirmados</div> <div class="h5 mb-0 font-weight-bold text-gray-800">',$dadosSite);
 $array2 = explode('<small class="text-xs text-danger">',$array1[1]);
 $incidencia1=explode('ncia</div> <div class="h5 mb-0 font-weight-bold text-gray-800">',$dadosSite);
@@ -140,7 +140,7 @@ $html .='<table border="0">';
 		$html .= '<td>'.$val[$i].'</td>';
 	}
 	$html .= '</tr>';
-
+	
 	/*
 	$html .= '<tr>';
 	$html .= '<th>'.'Confirmados por idade:'.'</th>';
