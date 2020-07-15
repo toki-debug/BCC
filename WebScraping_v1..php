@@ -1,4 +1,7 @@
 <?php
+//WebScraping_v1.1
+//Arissa Yoshida :D
+
 
 //URL DO SITE
 $url = 'http://ti.saude.rs.gov.br/covid19/';
